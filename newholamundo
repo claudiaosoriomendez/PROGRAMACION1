@@ -1,0 +1,20 @@
+// newholamundo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+
+void main ()
+{
+	int edad;
+	cout<<"Ingrese su edad: ";
+	cin >> edad;
+	cout<<"Su edad es: ";
+	cout<<edad;
+
+	getch();
+
+	
+}
