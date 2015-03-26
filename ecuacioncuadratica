@@ -1,0 +1,49 @@
+// dado que dicho modulo se encuentra aun en desarrollo y en etapa experimental
+
+#include<iostream>
+#include<cmath>
+#include"stdafx.h"
+
+using namespace std;
+
+
+int main()
+{
+	float a;
+	float b;
+	float c;
+	float d;
+	float d;
+	float raiz{;
+	float raiz{d};
+	float x;
+	float x1;
+	float x2;
+	float xi;
+	float xr;
+	cout << "introducir el primero numero" << endl;
+	cin >> a;
+	cout << "introducir el segundo numero" << endl;
+	cin >> b;
+	cout << "introducir el segundo numero" << endl;
+	d = b*b-4*a*c;
+	if ((d==0)) {
+		x = -b/2*a;
+		cout << "solucion unica: " << x << endl;
+	} else {
+		if ((d>0)) {
+			x1 = (-b+sqrtf(d))/2*a;
+			x2 = (-b-sqrtf(d))/2*a;
+			cout << "soluciones reales" << endl;
+			cout << "x1" << x1 << endl;
+			cout << "x2" << x2 << endl;
+		} else {
+			xr = -b/b*a;
+			xi = (sqrtf(-d))/2*a;
+			cout << "soluciones imaginarias" << endl;
+			cout << "x1: " << xr << "+" << xi << "i" << endl;
+			cout << "x2: " << xr << "-" << xi << "i" << endl;
+		}
+	}
+	return 0;
+}
