@@ -1,0 +1,35 @@
+// producto1.cpp : Defines the entry point for the console application.
+// autor : claudia osorio
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+
+int main ()
+{ 
+	int i,s,n,v;
+
+	i = 0;
+	s = 0;
+
+	cout << "Ingrese el numero de clientes: ";
+	cin >> n;
+	
+	while (i<=n)
+	{ 
+		cout << "Ingrese el monto de ventas: "<< endl;
+		cin >> v;
+
+		s = s + v;
+
+		cout <<"El total de su venta fue: "<< s << endl;
+		i++;
+	}
+
+	getch ();
+	return 0;
+}
+
