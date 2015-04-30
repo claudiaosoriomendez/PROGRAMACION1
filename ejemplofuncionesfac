@@ -1,0 +1,36 @@
+// ejemplofunciones.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+//Prototipos
+int factorial (int fac);
+
+//Cuerpo principal
+void main ()
+{
+	int fac,N;
+	
+	cout <<"Ingresar un numero: ";
+	cin>>N;
+
+    //Llamar a la funcion
+	fac=Factorial(N);
+	cout<<" el factorial del numero "<<N<<" es: "<<fac;
+	getch();
+
+}
+//Declaracion de la funcion
+int Factorial(int fac)
+{ 
+	int a;
+	a = 1;
+	for (int i=1;i<=fac; i++)
+		a = a*i;
+	return a;
+
+}
