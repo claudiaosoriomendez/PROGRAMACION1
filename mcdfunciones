@@ -1,0 +1,50 @@
+/ mcd funciones.cpp : Defines the entry point for the console application.
+// autor : claudia osorio
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+int mcd(int x,int y);
+
+void main() 
+{
+  int x,y,a,b,resul;
+  cout<<"Meta dos numeros: ";
+  cin>>x;
+  cin>>y;
+  if(x<y)
+  { 
+    a=x;
+    b=y;
+  }
+  else
+  { b=x;
+    a=y;
+  }
+  resul=mcd(a,b);
+  cout<<"el mcd es: "<<resul;
+  getch();
+}
+
+  
+int mcd(int x,int y)
+{
+  int z=1, i=2;
+  do{
+	  if(x%i==0 && y%i==0)
+	  { z=z*i; //acumulador de producto
+	    x=x/i;
+		y=y/i;
+	  }
+	  else
+		  i++;
+    } while(i<=x);
+	return z;
+}
+
+
+
+
