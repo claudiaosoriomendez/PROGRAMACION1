@@ -1,0 +1,67 @@
+// funcionessistema.cpp : Defines the entry point for the console application.
+// autor : claudia osorio
+
+#include "stdafx.h"
+#include "conio.h"
+#include "math.h"
+#include <iostream>
+
+using namespace std;
+
+//variables globales
+float x1,x2;
+
+//prototipos de las funciones
+void leer (float &a,float &b,float &c);
+void imprimir (float a,float b,float c,float x1,float x2);
+float ecuacion (float a,float b,float c,float x1,float x2);
+
+//cuerpo principal
+void main ()
+{ 
+float a,b,c;
+leer(a,b,c);
+x1 = ecuacion(a,b,c);
+x2 = ecuacion (a,b,c);
+imprimir (a,b,c,x1,x2);
+
+}
+void leer (float &a,float &b,float &c)
+{
+cout << "Ingrese el valor de a: ";
+cin >> a;
+cout << "Ingrese el valor de b: ";
+cin >>b;
+cout <<"Ingrese el valor de c: ";
+cin >>c;
+}
+
+void imprimir (float a,float b,float c,float x1,float x2)
+{ 
+cout << "el valor de a es: " <<a<<endl;
+cout << "el valor de b es: " <<b<<endl;
+cout << "el valor de c es: " <<c<<endl;
+cout << "el valor de x1 es: " <<x1<<endl;
+cout << "el valor de x2 es: " <<x2<<endl;
+
+}
+
+float ecuacion (float a,float b,float c,float x1,float x2)
+{ float d;
+
+  d = sqrt (pow(b,2)-(4*a*c));
+
+  if (d>=0)
+  {
+  x1 = ((-b + (d))/2*a);
+  x2 = ((-b - (d))/2*a);
+  }
+  else
+  { cout<<"solucion imaginaria";
+  }
+  getch ();
+  return x1;
+  return x2;
+
+}
+
